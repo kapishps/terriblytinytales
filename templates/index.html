@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="row">
+        <div id="input_hastag" class="col s12">
+            <form method="get" action="{% url 'analyse' %} ">
+                <div class="input-field col s4 m3 l2 offset-s2 offset-m2 offset-l2">
+                    <label for="{{ input_n.q.id_for_label }}">Input Number N:</label>
+                    {{ input_n.q }}
+                </div>
+                <br>
+                <button class="btn waves-effect waves-light" type="submit">Analyse
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <br>
+        <table class="striped bordered centered ">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in all_objects %}
+                <tr>
+                <td>{{ object.word }}</td>
+                <td>{{ object.freq }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
