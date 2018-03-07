@@ -1,1 +1,4 @@
 Django==1.11.10
+six==1.10.0
+gunicorn==19.6.0
+whitenoise==3.2

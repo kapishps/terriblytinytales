@@ -25,7 +25,7 @@ SECRET_KEY = 'hypzea*r-*=(=b&15mnri4$gf*6gatql390*99=-%c9#s5kpzv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
